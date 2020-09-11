@@ -4,6 +4,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
     root: {
@@ -24,7 +25,7 @@ const useStyles = makeStyles({
 
 const PostDetails = (props) => {
     const classes = useStyles();
-    const {title, body} = props.post;
+    const {title, body, id} = props.post;
     return (
         <Card className={classes.root} variant="outlined">
             <CardContent>
@@ -36,7 +37,7 @@ const PostDetails = (props) => {
                 </Typography>
                 <br/>
                 <Typography>
-                    <Button size="small" color="primary">Read More</Button>
+                    <Button size="small" color="primary"><Link to={`/post/${id}`}>See More</Link></Button>
                 </Typography>
             </CardContent>
         </Card>

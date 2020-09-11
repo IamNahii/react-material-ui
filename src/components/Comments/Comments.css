@@ -1,0 +1,14 @@
+.comments-style{
+    margin: 0 auto;
+    width: 60%;
+}
+
+.post-body{
+    border: 1px solid lightslategray;
+    padding: 10px;
+}
+
+.comments-style h3{
+    border-bottom: 1px solid #000;
+    padding: 5px;
+}

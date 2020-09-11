@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import PostDetails from '../PostDetails/PostDetails';
+import "./Post.css"
+
 
 const Posts = () => {
     const [posts, setPosts] = useState([]);
@@ -11,10 +13,10 @@ const Posts = () => {
         .then(data => setPosts(data))
     }, [])
     return (
-        <div>
-           <h3>Number of posts: {posts.length}</h3> 
+        <div className="post-style">
+           <h3>News Feed</h3> 
            {
-               posts.map(post => <PostDetails post = {post}></PostDetails>)
+               posts.map(post => <PostDetails key={post.id} post = {post}></PostDetails>)
            }
         </div>
     );
